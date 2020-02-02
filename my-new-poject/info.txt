@@ -15,3 +15,47 @@ des dels reducers no es pot cridar a l'api
 REdux
 
 npm i -S redux react-redux redux-saga
+
+
+
+es canvien les arrow functions per functions normals, 
+perquè sinó quan falla alguna cosa, no et sap dir exactament de quina funció ha saltat
+
+he fet servir el navigation que el que fa és redireccionar a rutes concretes,
+de moment l'únic que he fet és redirigir el loadingpage cap al login
+
+
+instalació del native base
+del native base utilitzem components com per exemple Content, Container, Grid, etc.
+també el que fem és importar els estils que creem al fitxer style.js, més o menys com els css normals
+i importem aquests estils a cada index.js corresponent. Cada component té diferents propietats d'estil
+i posem característiques d'estil en funció d'aquests.
+
+native-base, el que fa és envoltar els components de react
+Container és un component de native-base similar al View
+
+A la pagina del login importem el button, i dins dels estils importem dimensions 
+que ens permet trobar l'amplada i alçada del mobil (ens serveix per responsive)
+
+què són els hooks
+
+Hi ha components de classe i de funció, per exemple:
+
+1. Amb classe
+class Comp extends Component{
+    render ...
+}
+
+2. Sense classe
+function Comp() {}
+const Comp = () => {}
+
+Els components de funció, són components que no tenen estat. Els hooks
+tenen la propietat de posar variables i/o estats als components que no tenen
+classe.
+
+EXPLICACIÓ DE HOOKS DE YOUTUBE
+https://www.youtube.com/watch?v=ISGCTngdp8c
+
+
+HE MIRAT FINS EL 35

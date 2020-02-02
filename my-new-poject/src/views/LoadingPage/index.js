@@ -1,4 +1,20 @@
-import React from 'react';
-import {View,Text} from 'react-native';
+import React, { useEffect } from 'react';
+import {Spinner,Container, Content, Grid} from 'native-base';
 
-export default () => (<View style={{marginTop:74}}><Text>Loading</Text></View>)
+import styles from './style';
+import {LOGIN} from '../../consts';
+
+export default ({ navigation }) => {
+    useEffect(() => {
+        navigation.navigate(LOGIN);
+    });
+    return(
+        <Container>
+            <Content contentContainerStyle={styles.content}>
+                <Grid style={styles.grid}>
+                    <Spinner color="blue"/>
+                </Grid>
+            </Content>
+        </Container>
+    );
+};
