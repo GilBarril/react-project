@@ -1,0 +1,17 @@
+instalar el node.
+
+npm install expo-cli --global
+
+npm install dins del projecte
+
+expo start
+
+
+
+des dels reducers no es pot cridar a l'api
+
+
+
+REdux
+
+npm i -S redux react-redux redux-saga
