@@ -13,7 +13,7 @@ const ROBOTO_MEDIUM = require('../node_modules/native-base/Fonts/Roboto_medium.t
 
 export default () => {
 
-    /*fontsLoaded és el que vols modificar (true/false), i que et retorna el hook
+    /*fontsLoaded és el que vols modificar (true/false), i que et retorna el hook, declarat d'aquesta manera és com si fos variable d'estat
       setFontsLoaded és la funció a la qual li pases el valor que vols que tingui el primer paràmetre
       use State és el hook que utilitzes, simulant el fontsLoaded com a variable d'estat
     */
@@ -26,7 +26,7 @@ export default () => {
     }, [fontsLoaded]); //només s'actualitza si fontsLoaded canvia, aquí seria com el segon paràmetre de useEffect
 
     const loadFonts = async() => {
-        await Font.loadAsync({
+        await Font.loadAsync({  //loadAsync crida fonts externes de manera asincrona
             [ROBOTO_FONT]: ROBOTO,
             [ROBOTO_MEDIUM_FONT]: ROBOTO_MEDIUM
         });
@@ -37,7 +37,7 @@ export default () => {
     }
 
     /*use Effect és un hook que ens carrega les fonts i ho fa en funció de
-    fonts loaded. la funció loadFonts es fa asyncrona i s'espera a que es carreguin
+    fontsLoaded. la funció loadFonts es fa asyncrona i s'espera a que es carreguin
     les fonts per poder retornar-ho. i per bones pràctiques es fa fora del useEffect
     també he posat un spinner que mira si les fonts no estan carregades, es mostra */
 
