@@ -5,6 +5,7 @@ import styles from './style';
 import {LOGIN} from '../../consts';
 
 export default ({ navigation }) => {
+    
     useEffect(() => {
         navigation.navigate(LOGIN);
     });
